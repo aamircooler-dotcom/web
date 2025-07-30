@@ -281,7 +281,7 @@ gsap.to(portfolioRef.current, {
   ease: "power3.out",
   scrollTrigger: {
     trigger: portfolioRef.current,
-    start: "top 80%", // start thoda pehle
+    start: "top 50%", // start thoda pehle
     toggleActions: "play none none reverse",
     once: true
   }

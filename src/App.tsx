@@ -658,7 +658,7 @@ ScrollTrigger.create({
           >
             SANIMANI @ GMAIL.COM
           </a>
-          <p className="text-black/60 text-sm">
+          <p className="text-[#6a6966] text-sm">
             Let’s create something that actually works.
           </p>
         </div>
@@ -674,7 +674,7 @@ ScrollTrigger.create({
           >
             LINKEDIN
           </a>
-          <p className="text-black/60 text-sm">
+          <p className="text-[#6a6966] text-sm">
             See how UX meets business - connect with me.
           </p>
         </div>
@@ -690,7 +690,7 @@ ScrollTrigger.create({
           >
             INSTAGRAM
           </a>
-          <p className="text-black/60 text-sm">
+          <p className="text-[#6a6966] text-sm">
             Tap in for visuals with purpose. - follow the flow.
           </p>
         </div>

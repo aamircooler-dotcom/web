@@ -298,19 +298,20 @@ useEffect(() => {
 
 
  useEffect(() => {
-  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  gsap.registerPlugin(ScrollTrigger);
-
-   useEffect(() => {
   if (!portfolioSectionRef.current) return;
 
   const trigger = ScrollTrigger.create({
     trigger: portfolioSectionRef.current,
-    start: "top center", // adjust as needed
+    start: "top center",
     end: "bottom center",
-    onEnter: () => setIsMouseTrackingEnabled(false),  // stop tracking
-    onLeaveBack: () => setIsMouseTrackingEnabled(true),  // resume tracking
+    onEnter: () => {
+      setIsMouseTrackingEnabled(false); // ✅ just update state
+    },
+    onLeaveBack: () => {
+      setIsMouseTrackingEnabled(true);
+    },
   });
+
 
   return () => {
     trigger.kill(); // cleanup

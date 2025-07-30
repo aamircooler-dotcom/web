@@ -529,7 +529,7 @@ useEffect(() => {
               VISUALS THAT
             </div>
             <div 
-              className="text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white leading-tight mt-2 opacity-0 animate-fade-in-delayed"
+              className="text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white/90 leading-tight mt-2 opacity-0 animate-fade-in-delayed"
               style={{ 
                 animationDelay: '1.4s', 
                 animationFillMode: 'forwards',

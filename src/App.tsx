@@ -392,7 +392,7 @@ useEffect(() => {
       {/* Fixed Background */}
       <div 
         ref={fixedBackgroundRef}
-        className="fixed inset-0 bg-cover bg-center contrast-110 brightness-20"
+        className="fixed inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url('/bg.png')`,
           backgroundAttachment: 'fixed',

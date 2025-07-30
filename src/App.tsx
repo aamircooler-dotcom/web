@@ -651,10 +651,10 @@ ScrollTrigger.create({
       <div className="space-y-10 text-center">
         {/* Email */}
         <div className="flex flex-col items-center gap-2">
-          <Mail className="text-black w-6 h-6" />
+          <Mail className="text-[#d0d0cf] w-6 h-6" />
           <a
             href="mailto:sanimani@gmail.com"
-            className="text-black font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+            className="text-[#d0d0cf] font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             SANIMANI @ GMAIL.COM
           </a>
@@ -665,12 +665,12 @@ ScrollTrigger.create({
 
         {/* LinkedIn */}
         <div className="flex flex-col items-center gap-2">
-          <Linkedin className="text-black w-6 h-6" />
+          <Linkedin className="text-[#d0d0cf] w-6 h-6" />
           <a
             href="https://www.linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+            className="text-[#d0d0cf] font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             LINKEDIN
           </a>
@@ -681,12 +681,12 @@ ScrollTrigger.create({
 
         {/* Instagram */}
         <div className="flex flex-col items-center gap-2">
-          <Instagram className="text-black w-6 h-6" />
+          <Instagram className="text-[#d0d0cf] w-6 h-6" />
           <a
             href="https://www.instagram.com/yourhandle"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+            className="text-[#d0d0cf] font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             INSTAGRAM
           </a>

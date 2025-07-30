@@ -261,44 +261,18 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   };
 
   // Mouse tracking effect
- useEffect(() => {
+useEffect(() => {
   const handleMouseMove = (e: MouseEvent) => {
-    if (!heroRef.current) return;
+    if (!isCursorInsideHero) return; // ✅ Skip updates outside
 
-    const bounds = heroRef.current.getBoundingClientRect();
-
-    const isInside =
-      e.clientX >= bounds.left &&
-      e.clientX <= bounds.right &&
-      e.clientY >= bounds.top &&
-      e.clientY <= bounds.bottom;
-
-    if (isInside) {
-      setIsCursorInsideHero(true);
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 1;
-      setMousePosition({ x, y });
-    } else {
-      setIsCursorInsideHero(false);
-      setMousePosition({ x: 0, y: 0 }); // ✅ reset to center
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsCursorInsideHero(false);
-    setMousePosition({ x: 0, y: 0 }); // ✅ reset to center
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    setMousePosition({ x, y });
   };
 
   window.addEventListener("mousemove", handleMouseMove);
-  window.addEventListener("mouseleave", handleMouseLeave);
-
-  return () => {
-    window.removeEventListener("mousemove", handleMouseMove);
-    window.removeEventListener("mouseleave", handleMouseLeave);
-  };
-}, []);
-
-
+  return () => window.removeEventListener("mousemove", handleMouseMove);
+}, [isCursorInsideHero]); // ✅ re-run if cursor enters/exits
 
  useEffect(() => {
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());

@@ -509,7 +509,7 @@ useEffect(() => {
         >
           <div className="text-center z-10 px-6">
             <div 
-              className="text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white/60 leading-tight opacity-0 animate-fade-in-delayed"
+              className="text-2xl md:text-4xl lg:text-5xl ibm-font tracking-tight text-white/60 leading-tight opacity-0 animate-fade-in-delayed"
               style={{ 
                 animationDelay: '0.8s', 
                 animationFillMode: 'forwards',

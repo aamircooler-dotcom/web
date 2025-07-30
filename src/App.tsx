@@ -278,17 +278,17 @@ function App() {
 
 // Mouse tracking effect
 useEffect(() => {
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
 
-    const x = (e.clientX / window.innerWidth - 0.5) * 2;
-    const y = (e.clientY / window.innerHeight - 0.5) * 2;
-    setMousePosition({ x, y });
-  };
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      setMousePosition({ x, y });
+    };
 
-  window.addEventListener("mousemove", handleMouseMove);
-  return () => window.removeEventListener("mousemove", handleMouseMove);
-}, [isCursorInsideHero, isMouseTrackingEnabled]);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isCursorInsideHero, isMouseTrackingEnabled]);
 
 // Disable mouse tracking when portfolio section enters
 useEffect(() => {

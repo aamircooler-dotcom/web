@@ -275,7 +275,7 @@ function App() {
 
    // Animate portfolio section as it enters
 gsap.to(portfolioRef.current, {
-  y: 0,
+  y: 300,
   opacity: 1,
   duration: 1.2,
   ease: "power3.out",

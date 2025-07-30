@@ -315,7 +315,7 @@ useEffect(() => {
     trigger: heroRef.current,
     start: "top top",
     end: "top+=1500", // 🔁 reduce to make it slower & smoother
-    scrub: 10   // 🔁 increase for smoother animation
+    scrub: 2.9   // 🔁 increase for smoother animation
   }
 });
    
@@ -448,7 +448,7 @@ useEffect(() => {
     top: '21%',
     left: '1%',
       transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
-     transition: 'transform 0.2s'
+     transition: 'transform 0.2s ease-in'
   }}
 >
 

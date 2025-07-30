@@ -667,7 +667,7 @@ useEffect(() => {
 <div className="space-y-10 text-center">
             {/* Email */}
             <div className="flex flex-col items-center gap-2">
-              <Mail className="text-black/70 w-8 h-8" />
+              <Mail className="text-white/90 w-8 h-8" />
               <a
                 href="mailto:sanimani@gmail.com"
                 className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"

@@ -398,6 +398,10 @@ useEffect(() => {
     zIndex: -1
   }}
 >
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/40" />
+</div>
+
       {/* Main Hero Section */} 
       <div 
         ref={heroRef}
@@ -473,9 +477,6 @@ useEffect(() => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-transparent to-transparent" />
     </div> 
   </div>
-</div>
-{/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/40" />
 </div>
 
         {/* Background Text - Aamir Naqvi at Bottom */}

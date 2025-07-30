@@ -302,18 +302,7 @@ useEffect(() => {
       onLeaveBack: () => setIsMouseTrackingEnabled(true),
     });
 
-    return () => {
-      trigger.kill();
-    };
-  }, []);
 
-  return (
-    <div className="overflow-x-hidden">
-      <HeroSection ref={heroRef} mousePosition={mousePosition} />
-      <PortfolioSection ref={portfolioSectionRef} />
-    </div>
-  );
-};
 
 
   gsap.to(portraitRef.current, {

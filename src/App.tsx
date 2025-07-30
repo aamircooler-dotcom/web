@@ -240,6 +240,7 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [showTestimonials, setShowTestimonials] = React.useState(true);
   const [showContact, setShowContact] = React.useState(false);
+  const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const eyesRef = useRef<HTMLDivElement>(null);
   const backgroundTextRef = useRef<HTMLDivElement>(null);
@@ -250,9 +251,9 @@ function App() {
   const portfolioRef = useRef<HTMLDivElement>(null);
 
   // Mouse tracking state
-  const heroRef = useRef<HTMLDivElement>(null);
 const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 const [isCursorInsideHero, setIsCursorInsideHero] = useState(false);
+
    
 
   // Handle splash screen completion 

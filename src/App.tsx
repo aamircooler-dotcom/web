@@ -472,7 +472,8 @@ useEffect(() => {
         src="/eyes.png"
         alt="Portrait"
         className="w-full h-full object-cover grayscale contrast-110 brightness-90"
-        style={{ transform: 'scale(1.05)' }}
+        style={{ transform: 'scale(1.05)',
+                transition: 'transform 0.4s ease-out'}}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-transparent to-transparent" />
     </div> 

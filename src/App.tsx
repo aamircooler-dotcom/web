@@ -635,10 +635,9 @@ ScrollTrigger.create({
 
      {/* Contact Section */}
  <div
-      <div
-  id="contact-section"
-  className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 rounded-t-[3rem]"
->
+      id="contact-section"
+      className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 bg-white rounded-t-[3rem]"
+    > 
       {/* Main Heading */}
       <h2 className="text-4xl md:text-6xl font-bosenAlt text-black text-center mb-4 tracking-wide">
         LET'S START A CONVERSATION

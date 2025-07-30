@@ -373,7 +373,7 @@ useEffect(() => {
     // Show contact section when portfolio section is visible
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current, 
-      start: "center center",
+      start: "top 30%",
       onEnter: () => setShowContact(true),
       onLeaveBack: () => setShowContact(false),
     });

@@ -346,7 +346,7 @@ ScrollTrigger.create({
     scrollTrigger: {
       trigger: heroRef.current,
       start: "bottom bottom",
-      end: "bottom+=-100 top",
+      end: "top top",
       scrub: 1
     }
   });

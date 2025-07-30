@@ -334,7 +334,7 @@ function App() {
   scrollTrigger: {
     trigger: portfolioSectionRef.current,
     start: "top 40%", // trigger when bottom of element hits 80% of viewport
-    end: "top top", // optional: end when top of element hits 20% of viewport
+    end: "bottom top", // optional: end when top of element hits 20% of viewport
    scrub: 3
   }
 });

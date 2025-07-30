@@ -20,6 +20,9 @@ function VideoPlayer({ src, title, isShowreel = false }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = React.useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
+
 
   const handleVideoClick = () => {
     if (videoRef.current) {

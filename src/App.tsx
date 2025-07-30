@@ -706,7 +706,7 @@ useEffect(() => {
               >
                 INSTAGRAM
               </a>
-           <p className="text-white/30 text-xl md:text-1xl lg:text-2xl ibm-font mb-10 text-center">
+           <p className="text-white/30 text-xl md:text-1xl lg:text-2xl ibm-font mb-0 text-center">
                 Tap in for visuals with purpose. - follow the flow.
               </p>
             </div>

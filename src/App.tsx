@@ -365,7 +365,7 @@ useEffect(() => {
    
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
-      start: "top 21%",
+      start: "top 20%",
       onEnter: () => setShowTestimonials(false),
       onLeaveBack: () => setShowTestimonials(true),
     });
@@ -443,7 +443,7 @@ useEffect(() => {
   ref={eyesRef}
   className="absolute inset-0 flex items-center justify-center z-29"
   style={{
-    top: '20%',
+    top: '21%',
     left: '1%',
       transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
   }}

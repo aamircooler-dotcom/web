@@ -643,8 +643,8 @@ ScrollTrigger.create({
             LET'S START A CONVERSATION
           </h2>
 
-          {/* Subheading */}
-          <p className="text-white/30 text-lg md:text-xl mb-10 text-center">
+          {/* Subheading */} 
+          <p className="text-white/30 text-lg md:text-xl mb-10 text-center font-bosenAlt">
             Drop me a message, let's make something users will love.
           </p>
 

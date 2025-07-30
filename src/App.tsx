@@ -330,15 +330,20 @@ function App() {
 
   // Portfolio up animation
   gsap.to(portfolioSectionRef.current, {
-    y: -100,
-    opacity: 100,
-    scrollTrigger: {
-      trigger: heroRef.current,
-      start: "bottom 30%",
-      end: "bottom+=-100 top",
-      scrub: 1
-    }
-  });
+  y: 0,
+  opacity: 1,
+  duration: 1.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: portfolioSectionRef.current,
+    start: "bottom 80%", // trigger when bottom of element hits 80% of viewport
+    end: "top 20%", // optional: end when top of element hits 20% of viewport
+    toggleActions: "play none none reverse",
+    once: true,
+    // markers: true, // enable for debug
+  }
+});
+
    
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,

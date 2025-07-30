@@ -299,8 +299,6 @@ useEffect(() => {
     <div ref={heroRef} id="hero" className="relative h-screen w-full bg-black">
       {/* your mouse-tracking elements, eyes etc. */}
     </div>
-  );
-}
 
  useEffect(() => {
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());

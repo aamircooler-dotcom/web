@@ -352,17 +352,7 @@ ScrollTrigger.create({
     }
   });
 
-  // Portfolio up animation
-  gsap.to(portfolioSectionRef.current, {
-    y: -300,
-    opacity: 100,
-    scrollTrigger: {
-      trigger: heroRef.current,
-      start: "center top",
-      end: "bottom+=-100 top",
-      scrub: 1
-    }
-  });
+  
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
       start: "bottom bottom",

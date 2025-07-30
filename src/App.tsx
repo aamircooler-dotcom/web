@@ -564,7 +564,11 @@ ScrollTrigger.create({
       {/* Portfolio Section */}
       <div 
          ref={portfolioSectionRef} 
-        className="relative min-h-screen w-full bg-white z-40 rounded-t-[3rem] texture-overlay">
+        className="relative min-h-screen w-full bg-white z-40 rounded-t-[3rem] rounded-b-[3rem] texture-overlay opacity-0 animate-fade-in-delayed"
+        style={{ 
+          animationDelay: '0.5s', 
+          animationFillMode: 'forwards'
+        }}>
         
         {/* Random Lines Overlay */}
         <RandomLines count={25} className="z-10" />
@@ -632,61 +636,61 @@ ScrollTrigger.create({
      {/* Contact Section */}
  <div
       id="contact-section"
-      className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-10 bg-transparent"
+      className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 bg-white rounded-t-[3rem]"
     >
       {/* Main Heading */}
-      <h2 className="text-4xl md:text-6xl font-extrabold text-white text-center mb-4 tracking-wide">
+      <h2 className="text-4xl md:text-6xl font-bosenAlt text-black text-center mb-4 tracking-wide">
         LET'S START A CONVERSATION
       </h2>
 
       {/* Subheading */}
-      <p className="text-gray-400 text-lg md:text-xl mb-10 text-center">
+      <p className="text-black/60 text-lg md:text-xl mb-10 text-center font-bosenAlt">
         Drop me a message, let’s make something users will love.
       </p>
 
       <div className="space-y-10 text-center">
         {/* Email */}
         <div className="flex flex-col items-center gap-2">
-          <Mail className="text-white w-6 h-6" />
+          <Mail className="text-black w-6 h-6" />
           <a
             href="mailto:sanimani@gmail.com"
-            className="text-white font-bold text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+            className="text-black font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             SANIMANI @ GMAIL.COM
           </a>
-          <p className="text-gray-400 text-sm">
+          <p className="text-black/60 text-sm">
             Let’s create something that actually works.
           </p>
         </div>
 
         {/* LinkedIn */}
         <div className="flex flex-col items-center gap-2">
-          <Linkedin className="text-white w-6 h-6" />
+          <Linkedin className="text-black w-6 h-6" />
           <a
             href="https://www.linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-bold text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+            className="text-black font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             LINKEDIN
           </a>
-          <p className="text-gray-400 text-sm">
+          <p className="text-black/60 text-sm">
             See how UX meets business - connect with me.
           </p>
         </div>
 
         {/* Instagram */}
         <div className="flex flex-col items-center gap-2">
-          <Instagram className="text-white w-6 h-6" />
+          <Instagram className="text-black w-6 h-6" />
           <a
             href="https://www.instagram.com/yourhandle"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-bold text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+            className="text-black font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             INSTAGRAM
           </a>
-          <p className="text-gray-400 text-sm">
+          <p className="text-black/60 text-sm">
             Tap in for visuals with purpose. - follow the flow.
           </p>
         </div>

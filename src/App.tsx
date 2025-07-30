@@ -251,8 +251,8 @@ function App() {
   const portfolioRef = useRef<HTMLDivElement>(null);
 
   // Mouse tracking state
-const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-const [isCursorInsideHero, setIsCursorInsideHero] = useState(false);
+const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
 
    useEffect(() => {
     const handleMouseEnter = () => setIsCursorInsideHero(true);

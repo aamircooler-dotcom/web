@@ -389,16 +389,18 @@ useEffect(() => {
       {/* Splash Screen */}
       {isLoading && <SplashScreen onLoadComplete={handleLoadComplete} />}
 
-      {/* Fixed Background */}
-      <div 
-        ref={fixedBackgroundRef}
-        className="fixed inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('/bg.png')`,
-          backgroundAttachment: 'fixed',
-          zIndex: -1
-        }}
-      />
+<div 
+  ref={fixedBackgroundRef}
+  className="fixed inset-0 bg-cover bg-center"
+  style={{
+    backgroundImage: `url('/bg.png')`,
+    backgroundAttachment: 'fixed',
+    zIndex: -1
+  }}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/40" />
+</div>
 
       {/* Main Hero Section */} 
       <div 

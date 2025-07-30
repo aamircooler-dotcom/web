@@ -249,9 +249,6 @@ function App() {
   const fixedBackgroundRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLDivElement>(null);
 
-  // Mouse tracking state
-  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
-
   // Handle splash screen completion
   const handleLoadComplete = () => {
     setIsLoading(false);

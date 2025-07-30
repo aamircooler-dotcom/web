@@ -660,7 +660,10 @@ useEffect(() => {
           </h2>
 
           {/* Subheading */} 
-         <p className="text-white/30 ibm-font mb-10 text-center" style={{ fontSize: '2rem' }}>
+          <p className="text-white/30 text-lg ibm-font md:text-xl mb-10 text-center"> 
+            Drop me a message, let's make something users will love.
+          </p>
+
           <div className="space-y-10 text-center">
             {/* Email */}
             <div className="flex flex-col items-center gap-2">

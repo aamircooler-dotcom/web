@@ -681,7 +681,7 @@ useEffect(() => {
 
             {/* LinkedIn */}
             <div className="flex flex-col items-center gap-2">
-              <Linkedin className="text-black/70 w-6 h-6" />
+              <Linkedin className="text-white/70 w-8 h-8" />
               <a
                 href="https://www.linkedin.com/in/yourprofile"
                 target="_blank"
@@ -697,7 +697,7 @@ useEffect(() => {
 
             {/* Instagram */}
             <div className="flex flex-col items-center gap-2">
-              <Instagram className="text-black/70 w-6 h-6" />
+              <Instagram className="text-white/70 w-8 h-8" />
               <a
                 href="https://www.instagram.com/yourhandle"
                 target="_blank"

@@ -273,19 +273,6 @@ function App() {
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   gsap.registerPlugin(ScrollTrigger);
 
-   // Animate portfolio section as it enters
-gsap.to(portfolioRef.current, {
-    y: 0,
-    opacity: 100,
-    duration: 1.2,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: portfolioRef.current,
-      start: 'top 0%', // better than 'bottom 100%'
-      toggleActions: 'play none none reverse',
-      once: true,
-  }
-});
 
   gsap.to(portraitRef.current, {
   y: 400, // ya 200 if you want smaller slide
@@ -352,7 +339,17 @@ ScrollTrigger.create({
     }
   });
 
-  
+  // Portfolio up animation
+  gsap.to(portfolioSectionRef.current, {
+    y: -300,
+    opacity: 100,
+    scrollTrigger: {
+      trigger: heroRef.current,
+      start: "center top",
+      end: "bottom+=-100 top",
+      scrub: 1
+    }
+  });
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
       start: "bottom bottom",

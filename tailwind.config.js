@@ -7,6 +7,17 @@ export default {
   plugins: [],
 };
 // tailwind.config.js
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        ibm: ['"IBM Plex Sans"', 'sans-serif'],
+      },
+    },
+  },
+};
+
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "./public/index.html"],
   theme: {

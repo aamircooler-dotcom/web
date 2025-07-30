@@ -664,7 +664,7 @@ useEffect(() => {
   Drop me a message, let's make something users will love.
 </p>
 
-<div className="space-y-10 text-center">
+<div className="space-y-5 text-center">
             {/* Email */}
             <div className="flex flex-col items-center gap-2">
               <Mail className="text-black/70 w-6 h-6" />

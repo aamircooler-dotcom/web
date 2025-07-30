@@ -342,7 +342,7 @@ function App() {
    
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
-      start: "top center",
+      start: "top 80%",
       onEnter: () => setShowTestimonials(false),
       onLeaveBack: () => setShowTestimonials(true),
     });

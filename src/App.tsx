@@ -250,9 +250,9 @@ function App() {
   const fixedBackgroundRef = useRef<HTMLDivElement>(null); 
   const portfolioRef = useRef<HTMLDivElement>(null);
 // Mouse tracking state
- const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isCursorInsideHero, setIsCursorInsideHero] = useState(false);
-  const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = useState(true);
+ const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+  const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
+  const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = React.useState(true);
 
 // Track if cursor enters/leaves hero section
  useEffect(() => {

@@ -280,24 +280,24 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
       setMousePosition({ x, y });
     } else {
       setIsCursorInsideHero(false);
-      setMousePosition({ x: 0, y: 0 });
+      setMousePosition({ x: 0, y: 0 }); // ✅ reset to center
     }
   };
 
   const handleMouseLeave = () => {
-    // Reset when mouse leaves the entire window
     setIsCursorInsideHero(false);
-    setMousePosition({ x: 0, y: 0 });
+    setMousePosition({ x: 0, y: 0 }); // ✅ reset to center
   };
 
-  window.addEventListener('mousemove', handleMouseMove);
-  window.addEventListener('mouseleave', handleMouseLeave);
+  window.addEventListener("mousemove", handleMouseMove);
+  window.addEventListener("mouseleave", handleMouseLeave);
 
   return () => {
-    window.removeEventListener('mousemove', handleMouseMove);
-    window.removeEventListener('mouseleave', handleMouseLeave);
+    window.removeEventListener("mousemove", handleMouseMove);
+    window.removeEventListener("mouseleave", handleMouseLeave);
   };
 }, []);
+
 
 
  useEffect(() => {

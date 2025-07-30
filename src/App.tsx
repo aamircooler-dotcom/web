@@ -336,8 +336,8 @@ function App() {
   ease: "power3.out",
   scrollTrigger: {
     trigger: portfolioSectionRef.current,
-    start: "top 80%", // trigger when bottom of element hits 80% of viewport
-    end: "bottom 80%", // optional: end when top of element hits 20% of viewport
+    start: "top 0%", // trigger when bottom of element hits 80% of viewport
+    end: "bottom 100%", // optional: end when top of element hits 20% of viewport
     toggleActions: "play none none reverse",
     once: true,
     // markers: true, // enable for debug

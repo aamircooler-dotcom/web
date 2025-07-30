@@ -451,7 +451,7 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   ref={eyesRef}
   className="absolute inset-0 flex items-center justify-center z-29" 
   style={{
-  top: '20%',
+  top: '10%',
   left: '1%',
   transform: isCursorInsideHero
     ? `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`

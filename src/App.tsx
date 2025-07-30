@@ -281,18 +281,19 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   };
 
   // Mouse tracking effect
-useEffect(() => {
+uuseEffect(() => {
   const handleMouseMove = (e: MouseEvent) => {
-    if (!isCursorInsideHero) return; // ✅ Skip updates outside
+    if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
 
     const x = (e.clientX / window.innerWidth - 0.5) * 2;
-    const y = (e.clientY / window.innerHeight - 0.5) * 1;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
     setMousePosition({ x, y });
   };
 
   window.addEventListener("mousemove", handleMouseMove);
   return () => window.removeEventListener("mousemove", handleMouseMove);
-}, [isCursorInsideHero]); // ✅ re-run if cursor enters/exits
+}, [isCursorInsideHero, isMouseTrackingEnabled]);
+
 
  useEffect(() => {
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());

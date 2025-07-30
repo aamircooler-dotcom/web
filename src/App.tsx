@@ -8,7 +8,7 @@ import { Mail, Instagram, Linkedin } from 'lucide-react';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
- 
+
 interface VideoPlayerProps {
   src?: string;
   title: string;
@@ -250,59 +250,61 @@ function App() {
   const fixedBackgroundRef = useRef<HTMLDivElement>(null); 
   const portfolioRef = useRef<HTMLDivElement>(null);
 // Mouse tracking state
- const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
-  const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
-  const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = React.useState(true);
+const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
+const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = React.useState(true);
 
 // Track if cursor enters/leaves hero section
- useEffect(() => {
-    const handleMouseEnter = () => setIsCursorInsideHero(true);
-    const handleMouseLeave = () => {
-      setIsCursorInsideHero(false);
-      setMousePosition({ x: 0, y: 0 }); // optional reset
-    };
+useEffect(() => {
+  const heroElement = heroRef.current;
+  if (!heroElement) return;
 
-    const heroElement = heroRef.current;
-    if (heroElement) {
-      heroElement.addEventListener("mouseenter", handleMouseEnter);
-      heroElement.addEventListener("mouseleave", handleMouseLeave);
-    }
+  const handleMouseEnter = () => setIsCursorInsideHero(true);
+  const handleMouseLeave = () => {
+    setIsCursorInsideHero(false);
+    setMousePosition({ x: 0, y: 0 }); // Optional reset
+  };
 
-    return () => {
-      if (heroElement) {
-        heroElement.removeEventListener("mouseenter", handleMouseEnter);
-        heroElement.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-  }, []);
+  heroElement.addEventListener("mouseenter", handleMouseEnter);
+  heroElement.addEventListener("mouseleave", handleMouseLeave);
+
+  return () => {
+    heroElement.removeEventListener("mouseenter", handleMouseEnter);
+    heroElement.removeEventListener("mouseleave", handleMouseLeave);
+  };
+}, [heroRef]);
 
 // Mouse tracking effect
 useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
 
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      setMousePosition({ x, y });
-    };
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    setMousePosition({ x, y });
+  };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [isCursorInsideHero, isMouseTrackingEnabled]);
+  window.addEventListener("mousemove", handleMouseMove);
+  return () => window.removeEventListener("mousemove", handleMouseMove);
+}, [isCursorInsideHero, isMouseTrackingEnabled]);
 
 // Disable mouse tracking when portfolio section enters
 useEffect(() => {
-    if (!portfolioSectionRef.current) return;
+  if (!portfolioSectionRef.current) return;
 
-    const trigger = ScrollTrigger.create({
-      trigger: portfolioSectionRef.current,
-      start: "top center",
-      end: "bottom center",
-      onEnter: () => setIsMouseTrackingEnabled(false),
-      onLeaveBack: () => setIsMouseTrackingEnabled(true),
-    });
+  const trigger = ScrollTrigger.create({
+    trigger: portfolioSectionRef.current,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => setIsMouseTrackingEnabled(false),
+    onLeaveBack: () => setIsMouseTrackingEnabled(true),
+  });
 
-
+  return () => {
+    trigger.kill(); // ✅ Clean up
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // ← if you added this
+  };
+}, []);
 
 
   gsap.to(portraitRef.current, {

@@ -659,12 +659,12 @@ useEffect(() => {
             LET'S START A CONVERSATION
           </h2>
 
-          {/* Subheading */} 
-          <p className="text-white/30 text-lg ibm-font md:text-xl mb-10 text-center"> 
-            Drop me a message, let's make something users will love.
-          </p>
+         {/* Subheading */}
+<p className="text-white/30 text-xl md:text-2xl lg:text-3xl ibm-font mb-10 text-center">
+  Drop me a message, let's make something users will love.
+</p>
 
-          <div className="space-y-10 text-center">
+<div className="space-y-10 text-center">
             {/* Email */}
             <div className="flex flex-col items-center gap-2">
               <Mail className="text-black/70 w-6 h-6" />

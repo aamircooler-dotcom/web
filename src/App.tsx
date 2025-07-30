@@ -338,8 +338,7 @@ function App() {
     trigger: portfolioSectionRef.current,
     start: "top 0%", // trigger when bottom of element hits 80% of viewport
     end: "bottom 100%", // optional: end when top of element hits 20% of viewport
-    toggleActions: "play none none reverse",
-    once: true,
+    toggleActions: "play reverse play reverse",
     // markers: true, // enable for debug
   }
 });

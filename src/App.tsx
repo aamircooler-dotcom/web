@@ -365,7 +365,7 @@ useEffect(() => {
    
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
-      start: "top 20%",
+      start: "top 21%",
       onEnter: () => setShowTestimonials(false),
       onLeaveBack: () => setShowTestimonials(true),
     });

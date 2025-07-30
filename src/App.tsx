@@ -690,7 +690,7 @@ useEffect(() => {
               >
                 LINKEDIN
               </a>
-              <p className="text-black/50 text-sm font-bosenAlt">
+              <p className="text-white/80 font-bosenAlt text-xl md:text-2xl lg:text-3xl tracking-wide hover:text-blue-500 transition-colors duration-200"
                 See how UX meets business - connect with me.
               </p>
             </div>

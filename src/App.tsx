@@ -300,13 +300,6 @@ useEffect(() => {
     onLeaveBack: () => setIsMouseTrackingEnabled(true),
   });
 
-  return () => {
-    trigger.kill(); // ✅ Clean up
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // ← if you added this
-  };
-}, []);
-
-
   gsap.to(portraitRef.current, {
   y: 400, // ya 200 if you want smaller slide
   scrollTrigger: {

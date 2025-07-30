@@ -339,6 +339,18 @@ ScrollTrigger.create({
     }
   });
 
+    // bg text animate
+  gsap.to(backgroundTextRef.current, {
+    y: -300,
+    opacity: 100,
+    scrollTrigger: {
+      trigger: heroRef.current,
+      start: "bottom bottom",
+      end: "bottom+=-100 top",
+      scrub: 1
+    }
+  });
+
   // Portfolio up animation
   gsap.to(portfolioSectionRef.current, {
     y: -300,

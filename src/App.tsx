@@ -254,6 +254,11 @@ const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
 const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
 const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = React.useState(true);
 
+  // Handle splash screen completion
+  const handleLoadComplete = () => {
+    setIsLoading(false);
+  };
+
 // Track if cursor enters/leaves hero section
 useEffect(() => {
   const heroElement = heroRef.current;

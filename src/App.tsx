@@ -276,7 +276,7 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
     if (isInside) {
       setIsCursorInsideHero(true);
       const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 1;
       setMousePosition({ x, y });
     } else {
       setIsCursorInsideHero(false);

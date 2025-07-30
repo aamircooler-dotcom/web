@@ -572,8 +572,8 @@ ScrollTrigger.create({
 
       {/* Portfolio Section */}
       <div 
-         ref={portfolioSectionRef} 
-        className="relative min-h-screen w-full bg-white z-40 rounded-t-[3rem] rounded-b-[3rem] texture-overlay opacity-0 animate-fade-in-delayed"
+        ref={portfolioSectionRef} 
+        className="relative w-full bg-white z-40 rounded-t-[3rem] rounded-b-[3rem] texture-overlay opacity-0 animate-fade-in-delayed"
         style={{ 
           animationDelay: '0.5s', 
           animationFillMode: 'forwards'
@@ -639,6 +639,9 @@ ScrollTrigger.create({
               ))}
             </div>
           </div>
+          
+          {/* Extra spacing to ensure scrollability */}
+          <div className="h-screen"></div>
         </div>
       </div>
 
@@ -647,7 +650,7 @@ ScrollTrigger.create({
       {showContact && (
         <div
           id="contact-section"
-          className="fixed bottom-0 left-0 right-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-30 bg-white opacity-0 animate-fade-in-delayed"
+          className="fixed inset-0 w-full h-screen flex flex-col items-center justify-center z-30 bg-white opacity-0 animate-fade-in-delayed"
           style={{
             animationDelay: '0.2s', 
             animationFillMode: 'forwards'

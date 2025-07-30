@@ -331,15 +331,11 @@ function App() {
   // Portfolio up animation
   gsap.to(portfolioSectionRef.current, {
   y: -100,
-  opacity: 1,
-  duration: 1.2,
-  ease: "power3.out",
   scrollTrigger: {
     trigger: portfolioSectionRef.current,
     start: "top 40%", // trigger when bottom of element hits 80% of viewport
     end: "top top", // optional: end when top of element hits 20% of viewport
-    toggleActions: "restart none none none",
-    // markers: true, // enable for debug
+   scrub: 3
   }
 });
 

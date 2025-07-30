@@ -655,7 +655,7 @@ useEffect(() => {
           }}
         > 
         {/* Main Heading */}
-<h2 className="text-6xl md:text-8xl font-bosenAlt text-white/90 text-center mb-6 tracking-wide">
+<h2 className="text-5xl md:text-7xl font-bosenAlt text-white/90 text-center mb-6 tracking-wide">
   LET'S START A CONVERSATION
 </h2>
 

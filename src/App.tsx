@@ -252,7 +252,6 @@ function App() {
 
   // Mouse tracking state
 const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
-const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
 const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = React.useState(true);
 
 

@@ -301,8 +301,8 @@ useEffect(() => {
   });
 
   return () => trigger.kill();
-}, 
-
+}, [portfolioSectionRef]);
+ 
 
 
   gsap.to(portraitRef.current, {

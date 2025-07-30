@@ -251,9 +251,9 @@ function App() {
   const portfolioRef = useRef<HTMLDivElement>(null);
 
   // Mouse tracking state
-  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
-const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
-
+  const heroRef = useRef<HTMLDivElement>(null);
+const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+const [isCursorInsideHero, setIsCursorInsideHero] = useState(false);
    
 
   // Handle splash screen completion 

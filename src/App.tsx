@@ -351,6 +351,7 @@ ScrollTrigger.create({
       scrub: 1
     }
   });
+   
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
       start: "bottom bottom",

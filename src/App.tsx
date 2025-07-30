@@ -655,12 +655,12 @@ useEffect(() => {
           }}
         > 
          {/* Main Heading */}
-          <h2 className="text-5xl md:text-7xl font-bosenAlt text-white/80 text-center mb-4 tracking-wide">
+          <h2 className="text-5xl md:text-7xl font-bosenAlt text-white/80 text-center mb-2 tracking-wide">
             LET'S START A CONVERSATION
           </h2>
 
          {/* Subheading */}
-<p className="text-white/30 text-xl md:text-2xl lg:text-3xl ibm-font mb-0 text-center">
+<p className="text-white/30 text-xl md:text-2xl lg:text-3xl ibm-font mb-5 text-center">
   Drop me a message, let's make something users will love.
 </p>
 

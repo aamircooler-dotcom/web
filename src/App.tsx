@@ -649,7 +649,7 @@ ScrollTrigger.create({
       {showContact && (
         <div
       id="contact-section"
-          className="fixed bottom-0 left-0 right-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 bg-white rounded-t-[3rem]"
+          className="fixed bottom-100 left-0 right-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 bg-white rounded-t-[3rem]"
           style={{
             animationDelay: '0.2s', 
             animationFillMode: 'forwards'

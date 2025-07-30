@@ -447,16 +447,18 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
 </div>
 
          {/* eyes */}
-<div 
+<div
   ref={eyesRef}
-  className="absolute inset-0 flex items-center justify-center z-29" 
+  className="absolute inset-0 flex items-center justify-center z-29"
   style={{
-  top: '21%',
-  left: '1%',
-  transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
-}}
-
+    top: '21%',
+    left: '1%',
+    transform: isCursorInsideHero
+      ? `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
+      : `translate(0px, 0px)` // ✅ Force reset when outside
+  }}
 >
+
   <div className="relative"> 
     <div 
       className="

@@ -453,11 +453,10 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   style={{
     top: '21%',
     left: '1%',
-    transform: isCursorInsideHero
-      ? `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
-      : `translate(0px, 0px)` // ✅ Force reset when outside
+    transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
   }}
 >
+
 
   <div className="relative"> 
     <div 

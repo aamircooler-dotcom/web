@@ -292,21 +292,28 @@ useEffect(() => {
 
 // Disable mouse tracking when portfolio section enters
 useEffect(() => {
-  if (!portfolioSectionRef.current) return;
+    if (!portfolioSectionRef.current) return;
 
-  const trigger = ScrollTrigger.create({
-    trigger: portfolioSectionRef.current,
-    start: "top center",
-    end: "bottom center",
-    onEnter: () => setIsMouseTrackingEnabled(false),
-    onLeaveBack: () => setIsMouseTrackingEnabled(true),
-  });
+    const trigger = ScrollTrigger.create({
+      trigger: portfolioSectionRef.current,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => setIsMouseTrackingEnabled(false),
+      onLeaveBack: () => setIsMouseTrackingEnabled(true),
+    });
 
-  return () => {
-    trigger.kill(); // ✅ Clean up
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // ← if you added this
-  };
-}, []);
+    return () => {
+      trigger.kill();
+    };
+  }, []);
+
+  return (
+    <div className="overflow-x-hidden">
+      <HeroSection ref={heroRef} mousePosition={mousePosition} />
+      <PortfolioSection ref={portfolioSectionRef} />
+    </div>
+  );
+};
 
 
   gsap.to(portraitRef.current, {

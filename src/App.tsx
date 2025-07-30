@@ -374,7 +374,7 @@ ScrollTrigger.create({
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
       start: "bottom 90%",
-      end: "bottom 100%",
+      end: "bottom bottom",
       onEnter: () => setShowContact(true),
       onLeave: () => setShowContact(false),
       onEnterBack: () => setShowContact(true),

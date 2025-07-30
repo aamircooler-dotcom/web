@@ -639,7 +639,7 @@ ScrollTrigger.create({
           }}
         > 
           {/* Main Heading */}
-          <h2 className="text-4xl md:text-6xl font-bosenAlt text-black/80 text-center mb-4 tracking-wide">
+          <h2 className="text-4xl md:text-6xl font-bosenAlt text-white/80 text-center mb-4 tracking-wide">
             LET'S START A CONVERSATION
           </h2>
 

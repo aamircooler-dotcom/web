@@ -316,12 +316,12 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
 });
 
    gsap.to(eyesRef.current, {
-  y: 200, // ya 200 if you want smaller slide
+  y: 400, // ya 200 if you want smaller slide
   scrollTrigger: {
     trigger: heroRef.current,
     start: "top top",
     end: "top+=1500", // 🔁 reduce to make it slower & smoother
-    scrub: 2.8     // 🔁 increase for smoother animation
+    scrub: 2.2    // 🔁 increase for smoother animation
   }
 });
    

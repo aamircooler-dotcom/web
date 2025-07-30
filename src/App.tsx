@@ -711,7 +711,7 @@ useEffect(() => {
     </p>
   </div>
 </div>
-
+</div>
       )}
     </div>
   );

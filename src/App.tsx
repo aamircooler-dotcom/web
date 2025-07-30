@@ -453,7 +453,6 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   style={{
   top: '21%',
   left: '1%',
-  transition: 'transform 0.2s ', // ✅ smooth reset
   transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
 }}
 

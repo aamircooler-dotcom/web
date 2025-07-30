@@ -330,7 +330,7 @@ function App() {
 
   // Portfolio up animation
   gsap.to(portfolioSectionRef.current, {
-  y: 0,
+  y: -900,
   opacity: 1,
   duration: 1.2,
   ease: "power3.out",

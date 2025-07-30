@@ -674,7 +674,7 @@ useEffect(() => {
     >
       SANIMANI @ GMAIL.COM
     </a>
-    <p className="text-black/60 text-lg max-w-xl">
+    <p className="text-black/60 text-lg ibm-font max-w-xl">
       Let's create something that actually works.
     </p>
   </div>

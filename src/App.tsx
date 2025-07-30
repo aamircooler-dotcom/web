@@ -240,7 +240,6 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [showTestimonials, setShowTestimonials] = React.useState(true);
   const [showContact, setShowContact] = React.useState(false);
-  const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const eyesRef = useRef<HTMLDivElement>(null);
   const backgroundTextRef = useRef<HTMLDivElement>(null);

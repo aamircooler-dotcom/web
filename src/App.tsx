@@ -288,22 +288,9 @@ useEffect(() => {
   return () => window.removeEventListener("mousemove", handleMouseMove);
 }, [isCursorInsideHero, isMouseTrackingEnabled]);
 
-// Disable mouse tracking when portfolio section enters
-useEffect(() => {
-  if (!portfolioSectionRef.current) return;
-
-  const trigger = ScrollTrigger.create({
-    trigger: portfolioSectionRef.current,
-    start: "top center", // adjust as needed
-    end: "bottom center",
-    onEnter: () => setIsMouseTrackingEnabled(false),  // stop tracking
-    onLeaveBack: () => setIsMouseTrackingEnabled(true),  // resume tracking
-  });
-
-  return () => {
-    trigger.kill(); // cleanup
-  };
-}, []);
+ useEffect(() => {
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(portraitRef.current, {
   y: 400, // ya 200 if you want smaller slide

@@ -300,9 +300,11 @@ useEffect(() => {
     onLeaveBack: () => setIsMouseTrackingEnabled(true),
   });
 
-  return () => trigger.kill();
-}, [portfolioSectionRef]);
- 
+  return () => {
+    trigger.kill(); // ✅ Clean up
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // ← if you added this
+  };
+}, []);
 
 
   gsap.to(portraitRef.current, {

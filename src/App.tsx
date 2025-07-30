@@ -441,7 +441,7 @@ useEffect(() => {
          {/* eyes */}
 <div
   ref={eyesRef}
-  className="absolute inset-0 flex items-center justify-center z-39"
+  className="absolute inset-0 flex items-center justify-center z-20"
   style={{
     top: '21%',
     left: '1%',

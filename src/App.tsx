@@ -373,7 +373,7 @@ ScrollTrigger.create({
     // Show contact section when portfolio section is visible
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
-      start: "top 30%",
+      start: "top 90%",
       end: "bottom bottom",
       onEnter: () => setShowContact(true),
       onLeave: () => setShowContact(false),

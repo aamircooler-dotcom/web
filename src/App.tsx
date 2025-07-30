@@ -342,7 +342,7 @@ ScrollTrigger.create({
 
   // Portfolio up animation
   gsap.to(portfolioSectionRef.current, {
-    y: 0,
+    y: 200,
     opacity: 100,
     scrollTrigger: {
       trigger: heroRef.current,

@@ -247,7 +247,7 @@ function App() {
   const mainTextRef = useRef<HTMLDivElement>(null);
   const triangleRef = useRef<HTMLDivElement>(null);
   const fixedBackgroundRef = useRef<HTMLDivElement>(null);
-  const portfolioRef = useRef();
+  const portfolioRef = useRef<HTMLDivElement>(null);
 
   // Mouse tracking state
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
@@ -577,7 +577,8 @@ ScrollTrigger.create({
         style={{ 
           animationDelay: '0.5s', 
           animationFillMode: 'forwards'
-        }}>
+        }}
+      >
         
         {/* Random Lines Overlay */}
         <RandomLines count={25} className="z-10" />
@@ -711,6 +712,7 @@ ScrollTrigger.create({
           </div>
         </div>
       )}
+    </div>
   );
 }
 

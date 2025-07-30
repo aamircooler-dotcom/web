@@ -301,7 +301,7 @@ useEffect(() => {
   });
 
   return () => trigger.kill();
-}, [portfolioSectionRef]);
+
 
 
 

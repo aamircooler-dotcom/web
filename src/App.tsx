@@ -686,11 +686,11 @@ useEffect(() => {
                 href="https://www.linkedin.com/in/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+                className="text-white/80 font-bosenAlt text-xl md:text-2xl lg:text-3xl tracking-wide hover:text-blue-500 transition-colors duration-200"
               >
                 LINKEDIN
               </a>
-              <p className="text-white/80 font-bosenAlt text-xl md:text-2xl lg:text-3xl tracking-wide hover:text-blue-500 transition-colors duration-200"
+              <p className="text-black/50 text-sm font-bosenAlt">
                 See how UX meets business - connect with me.
               </p>
             </div>

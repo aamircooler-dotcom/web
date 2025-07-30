@@ -294,11 +294,16 @@ useEffect(() => {
 
   const trigger = ScrollTrigger.create({
     trigger: portfolioSectionRef.current,
-    start: "top center",
+    start: "top center", // adjust as needed
     end: "bottom center",
-    onEnter: () => setIsMouseTrackingEnabled(false),
-    onLeaveBack: () => setIsMouseTrackingEnabled(true),
+    onEnter: () => setIsMouseTrackingEnabled(false),  // stop tracking
+    onLeaveBack: () => setIsMouseTrackingEnabled(true),  // resume tracking
   });
+
+  return () => {
+    trigger.kill(); // cleanup
+  };
+}, []);
 
   gsap.to(portraitRef.current, {
   y: 400, // ya 200 if you want smaller slide

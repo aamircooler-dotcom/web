@@ -254,7 +254,26 @@ function App() {
 const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 const [isCursorInsideHero, setIsCursorInsideHero] = useState(false);
 
-   
+   useEffect(() => {
+    const handleMouseEnter = () => setIsCursorInsideHero(true);
+    const handleMouseLeave = () => {
+      setIsCursorInsideHero(false);
+      setMousePosition({ x: 0, y: 0 });
+    };
+
+    const heroElement = heroRef.current;
+    if (heroElement) {
+      heroElement.addEventListener("mouseenter", handleMouseEnter);
+      heroElement.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      if (heroElement) {
+        heroElement.removeEventListener("mouseenter", handleMouseEnter);
+        heroElement.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, []);
 
   // Handle splash screen completion 
   const handleLoadComplete = () => {

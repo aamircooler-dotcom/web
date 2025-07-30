@@ -281,7 +281,7 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   };
 
   // Mouse tracking effect
-uuseEffect(() => {
+useEffect(() => {
   const handleMouseMove = (e: MouseEvent) => {
     if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
 

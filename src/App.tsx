@@ -644,7 +644,7 @@ ScrollTrigger.create({
       </h2>
 
       {/* Subheading */}
-      <p className="text-black/60 text-lg md:text-xl mb-10 text-center font-bosenAlt">
+      <p className="text-[#6a6966] text-lg md:text-xl mb-10 text-center font-bosenAlt">
         Drop me a message, let’s make something users will love.
       </p>
 

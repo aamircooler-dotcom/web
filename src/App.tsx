@@ -238,6 +238,7 @@ function TestimonialBadge({ badge }: { badge: TestimonialBadge }) {
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [showTestimonials, setShowTestimonials] = React.useState(true);
+  const [showContact, setShowContact] = React.useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const eyesRef = useRef<HTMLDivElement>(null);
@@ -367,6 +368,17 @@ ScrollTrigger.create({
       start: "bottom bottom",
       onEnter: () => setShowTestimonials(false),
       onLeaveBack: () => setShowTestimonials(true),
+    });
+
+    // Show contact section when portfolio section is visible
+    ScrollTrigger.create({
+      trigger: portfolioSectionRef.current,
+      start: "top 80%",
+      end: "bottom bottom",
+      onEnter: () => setShowContact(true),
+      onLeave: () => setShowContact(false),
+      onEnterBack: () => setShowContact(true),
+      onLeaveBack: () => setShowContact(false),
     });
 
   return () => {
@@ -634,68 +646,74 @@ ScrollTrigger.create({
 
 
      {/* Contact Section */}
- <div
+      {showContact && (
+        <div
       id="contact-section"
-      className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 bg-transparent rounded-t-[3rem]"
+          className="fixed bottom-0 left-0 right-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-50 bg-white rounded-t-[3rem] opacity-0 animate-fade-in-delayed"
+          style={{ 
+            animationDelay: '0.2s', 
+            animationFillMode: 'forwards'
+          }}
     > 
       {/* Main Heading */}
-      <h2 className="text-4xl md:text-6xl font-bosenAlt text-[#d0d0cf] text-center mb-4 tracking-wide">
+          <h2 className="text-4xl md:text-6xl font-bosenAlt text-black/80 text-center mb-4 tracking-wide">
         LET'S START A CONVERSATION
       </h2>
 
       {/* Subheading */}
-      <p className="text-[#6a6966] text-lg md:text-xl mb-10 text-center font-bosenAlt">
+          <p className="text-black/60 text-lg md:text-xl mb-10 text-center font-bosenAlt">
         Drop me a message, let’s make something users will love.
       </p>
 
       <div className="space-y-10 text-center">
         {/* Email */}
         <div className="flex flex-col items-center gap-2">
-          <Mail className="text-[#d0d0cf] w-6 h-6" />
+              <Mail className="text-black/70 w-6 h-6" />
           <a
             href="mailto:sanimani@gmail.com"
-            className="text-[#d0d0cf] font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             SANIMANI @ GMAIL.COM
           </a>
-          <p className="text-[#6a6966] text-sm">
+              <p className="text-black/50 text-sm font-bosenAlt">
             Let’s create something that actually works.
           </p>
         </div>
 
         {/* LinkedIn */}
         <div className="flex flex-col items-center gap-2">
-          <Linkedin className="text-[#d0d0cf] w-6 h-6" />
+              <Linkedin className="text-black/70 w-6 h-6" />
           <a
             href="https://www.linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#d0d0cf] font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             LINKEDIN
           </a>
-          <p className="text-[#6a6966] text-sm">
+              <p className="text-black/50 text-sm font-bosenAlt">
             See how UX meets business - connect with me.
           </p>
         </div>
 
         {/* Instagram */}
         <div className="flex flex-col items-center gap-2">
-          <Instagram className="text-[#d0d0cf] w-6 h-6" />
+              <Instagram className="text-black/70 w-6 h-6" />
           <a
             href="https://www.instagram.com/yourhandle"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#d0d0cf] font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
           >
             INSTAGRAM
           </a>
-          <p className="text-[#6a6966] text-sm">
+              <p className="text-black/50 text-sm font-bosenAlt">
             Tap in for visuals with purpose. - follow the flow.
           </p>
         </div>
       </div>
-    </div>
+        </div>
+      )}
           </div>
   );
 }

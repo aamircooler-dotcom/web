@@ -372,12 +372,9 @@ ScrollTrigger.create({
 
     // Show contact section when portfolio section is visible
     ScrollTrigger.create({
-      trigger: portfolioSectionRef.current,
-      start: "bottom 50%",
-      end: "bottom bottom",
+      trigger: portfolioSectionRef.current, 
+      start: "center center",
       onEnter: () => setShowContact(true),
-      onLeave: () => setShowContact(false),
-      onEnterBack: () => setShowContact(true),
       onLeaveBack: () => setShowContact(false),
     });
 
@@ -648,73 +645,72 @@ ScrollTrigger.create({
      {/* Contact Section */}
       {showContact && (
         <div
-      id="contact-section"
-          className="fixed bottom-0 left-0 right-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-0 bg-transparent rounded-t-[3rem]"
+          id="contact-section"
+          className="fixed bottom-0 left-0 right-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-30 bg-white opacity-0 animate-fade-in-delayed"
           style={{
             animationDelay: '0.2s', 
             animationFillMode: 'forwards'
           }}
-    > 
-      {/* Main Heading */}
+        > 
+          {/* Main Heading */}
           <h2 className="text-4xl md:text-6xl font-bosenAlt text-black/80 text-center mb-4 tracking-wide">
-        LET'S START A CONVERSATION
-      </h2>
+            LET'S START A CONVERSATION
+          </h2>
 
-      {/* Subheading */}
+          {/* Subheading */}
           <p className="text-black/60 text-lg md:text-xl mb-10 text-center font-bosenAlt">
-        Drop me a message, let’s make something users will love.
-      </p>
+            Drop me a message, let's make something users will love.
+          </p>
 
-      <div className="space-y-10 text-center">
-        {/* Email */}
-        <div className="flex flex-col items-center gap-2">
+          <div className="space-y-10 text-center">
+            {/* Email */}
+            <div className="flex flex-col items-center gap-2">
               <Mail className="text-black/70 w-6 h-6" />
-          <a
-            href="mailto:sanimani@gmail.com"
+              <a
+                href="mailto:sanimani@gmail.com"
                 className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
-          >
-            SANIMANI @ GMAIL.COM
-          </a>
+              >
+                SANIMANI @ GMAIL.COM
+              </a>
               <p className="text-black/50 text-sm font-bosenAlt">
-            Let’s create something that actually works.
-          </p>
-        </div>
+                Let's create something that actually works.
+              </p>
+            </div>
 
-        {/* LinkedIn */}
-        <div className="flex flex-col items-center gap-2">
+            {/* LinkedIn */}
+            <div className="flex flex-col items-center gap-2">
               <Linkedin className="text-black/70 w-6 h-6" />
-          <a
-            href="https://www.linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
-          >
-            LINKEDIN
-          </a>
+              >
+                LINKEDIN
+              </a>
               <p className="text-black/50 text-sm font-bosenAlt">
-            See how UX meets business - connect with me.
-          </p>
-        </div>
+                See how UX meets business - connect with me.
+              </p>
+            </div>
 
-        {/* Instagram */}
-        <div className="flex flex-col items-center gap-2">
+            {/* Instagram */}
+            <div className="flex flex-col items-center gap-2">
               <Instagram className="text-black/70 w-6 h-6" />
-          <a
-            href="https://www.instagram.com/yourhandle"
-            target="_blank"
-            rel="noopener noreferrer"
+              <a
+                href="https://www.instagram.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
-          >
-            INSTAGRAM
-          </a>
+              >
+                INSTAGRAM
+              </a>
               <p className="text-black/50 text-sm font-bosenAlt">
-            Tap in for visuals with purpose. - follow the flow.
-          </p>
-        </div>
-      </div>
+                Tap in for visuals with purpose. - follow the flow.
+              </p>
+            </div>
+          </div>
         </div>
       )}
-          </div>
   );
 }
 

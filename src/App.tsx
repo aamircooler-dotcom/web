@@ -509,7 +509,7 @@ useEffect(() => {
         >
           <div className="text-center z-10 px-6">
             <div 
-              className="text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white/80 leading-tight opacity-0 animate-fade-in-delayed"
+              className="text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white/60 leading-tight opacity-0 animate-fade-in-delayed"
               style={{ 
                 animationDelay: '0.8s', 
                 animationFillMode: 'forwards',
@@ -519,7 +519,7 @@ useEffect(() => {
               I EDIT
             </div>
             <div 
-              className="text-2xl md:text-3xl lg:text-4xl font-bosenAlt tracking-tight text-white/80 leading-tight mt-2 opacity-0 animate-fade-in-delayed"
+              className="text-2xl md:text-3xl lg:text-4xl font-bosenAlt tracking-tight text-white/50 leading-tight mt-2 opacity-0 animate-fade-in-delayed"
               style={{ 
                 animationDelay: '1.1s', 
                 animationFillMode: 'forwards',

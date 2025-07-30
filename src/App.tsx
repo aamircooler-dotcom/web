@@ -447,8 +447,7 @@ useEffect(() => {
   style={{
     top: '21%',
     left: '1%',
-        transform: isCursorInsideHero
-     ? transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
+      transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
   }}
 >
 

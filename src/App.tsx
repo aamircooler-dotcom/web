@@ -702,7 +702,7 @@ useEffect(() => {
                 href="https://www.instagram.com/yourhandle"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+                className="text-white/80 font-bosenAlt text-xl md:text-2xl lg:text-3xl tracking-wide hover:text-blue-500 transition-colors duration-200"
               >
                 INSTAGRAM
               </a>

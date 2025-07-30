@@ -654,64 +654,64 @@ useEffect(() => {
             animationFillMode: 'forwards'
           }}
         > 
-        {/* Main Heading */}
-<h2 className="text-5xl md:text-7xl font-bosenAlt text-white/90 text-center mb-6 tracking-wide">
-  LET'S START A CONVERSATION
-</h2>
+         {/* Main Heading */}
+          <h2 className="text-5xl md:text-7xl font-bosenAlt text-white/80 text-center mb-4 tracking-wide">
+            LET'S START A CONVERSATION
+          </h2>
 
-{/* Subheading */}
-<p className="text-white/30 text-2xl md:text-3xl lg:text-4xl ibm-font mb-16 text-center">
+         {/* Subheading */}
+<p className="text-white/30 text-xl md:text-2xl lg:text-3xl ibm-font mb-10 text-center">
   Drop me a message, let's make something users will love.
 </p>
 
-<div className="space-y-16 text-center px-4 md:px-0">
-  {/* Email */}
-  <div className="flex flex-col items-center gap-4">
-    <Mail className="text-black/70 w-8 h-8" />
-    <a
-      href="mailto:sanimani@gmail.com"
-      className="text-black/90 font-bosenAlt text-2xl tracking-wide hover:text-blue-500 transition-colors duration-200"
-    >
-      SANIMANI @ GMAIL.COM
-    </a>
-    <p className="text-black/60 text-lg ibm-font max-w-xl">
-      Let's create something that actually works.
-    </p>
-  </div>
+<div className="space-y-10 text-center">
+            {/* Email */}
+            <div className="flex flex-col items-center gap-2">
+              <Mail className="text-black/70 w-6 h-6" />
+              <a
+                href="mailto:sanimani@gmail.com"
+                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+              >
+                SANIMANI @ GMAIL.COM
+              </a>
+              <p className="text-black/50 text-sm font-bosenAlt">
+                Let's create something that actually works.
+              </p>
+            </div>
 
-  {/* LinkedIn */}
-  <div className="flex flex-col items-center gap-4">
-    <Linkedin className="text-black/70 w-8 h-8" />
-    <a
-      href="https://www.linkedin.com/in/yourprofile"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-black/90 font-bosenAlt text-2xl tracking-wide hover:text-blue-500 transition-colors duration-200"
-    >
-      LINKEDIN
-    </a>
-    <p className="text-black/60 text-lg ibm-font max-w-xl">
-      See how UX meets business - connect with me.
-    </p>
-  </div>
+            {/* LinkedIn */}
+            <div className="flex flex-col items-center gap-2">
+              <Linkedin className="text-black/70 w-6 h-6" />
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+              >
+                LINKEDIN
+              </a>
+              <p className="text-black/50 text-sm font-bosenAlt">
+                See how UX meets business - connect with me.
+              </p>
+            </div>
 
-  {/* Instagram */}
-  <div className="flex flex-col items-center gap-4">
-    <Instagram className="text-black/70 w-8 h-8" />
-    <a
-      href="https://www.instagram.com/yourhandle"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-black/90 font-bosenAlt text-2xl tracking-wide hover:text-blue-500 transition-colors duration-200"
-    >
-      INSTAGRAM
-    </a>
-    <p className="text-black/60 text-lg ibm-font max-w-xl">
-      Tap in for visuals with purpose. - follow the flow.
-    </p>
-  </div>
-</div>
-</div>
+            {/* Instagram */}
+            <div className="flex flex-col items-center gap-2">
+              <Instagram className="text-black/70 w-6 h-6" />
+              <a
+                href="https://www.instagram.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/80 font-bosenAlt text-lg tracking-wide hover:text-blue-500 transition-colors duration-200"
+              >
+                INSTAGRAM
+              </a>
+              <p className="text-black/50 text-sm font-bosenAlt">
+                Tap in for visuals with purpose. - follow the flow.
+              </p>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

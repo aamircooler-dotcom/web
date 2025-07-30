@@ -502,7 +502,7 @@ useEffect(() => {
         {/* Main Typography */}
         <div 
           ref={mainTextRef}
-          className="absolute inset-0 flex items-center justify-center z-30"
+          className="absolute inset-0 flex items-center justify-center z-40"
           style={{ top: '60%', left: '-1%' }}
         >
           <div className="text-center z-10 px-6">

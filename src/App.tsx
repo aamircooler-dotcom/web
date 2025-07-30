@@ -408,7 +408,7 @@ useEffect(() => {
       {/* Portrait */}
 <div 
   ref={portraitRef}
-  className="absolute inset-0 flex items-center justify-center z-30" 
+  className="absolute inset-0 flex items-center justify-center z-40" 
   style={{ top: '20%', left: '1%' }}
 >
   <div className="relative"> 

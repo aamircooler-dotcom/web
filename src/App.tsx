@@ -247,7 +247,7 @@ function App() {
   const portfolioSectionRef = useRef<HTMLDivElement>(null);
   const mainTextRef = useRef<HTMLDivElement>(null);
   const triangleRef = useRef<HTMLDivElement>(null);
-  const fixedBackgroundRef = useRef<HTMLDivElement>(null);
+  const fixedBackgroundRef = useRef<HTMLDivElement>(null); 
   const portfolioRef = useRef<HTMLDivElement>(null);
 
   // Mouse tracking state
@@ -283,22 +283,18 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
 
   // Mouse tracking effect
 useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isCursorInsideHero) return;
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!isCursorInsideHero || !isMouseTrackingEnabled) return;
 
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      setMousePosition({ x, y });
-    };
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    setMousePosition({ x, y });
+  };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [isCursorInsideHero]);
+  window.addEventListener("mousemove", handleMouseMove);
+  return () => window.removeEventListener("mousemove", handleMouseMove);
+}, [isCursorInsideHero, isMouseTrackingEnabled]);
 
-  return (
-    <div ref={heroRef} id="hero" className="relative h-screen w-full bg-black">
-      {/* your mouse-tracking elements, eyes etc. */}
-    </div>
 
  useEffect(() => {
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());

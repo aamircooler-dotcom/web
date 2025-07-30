@@ -266,7 +266,7 @@ useEffect(() => {
     if (!isCursorInsideHero) return; // ✅ Skip updates outside
 
     const x = (e.clientX / window.innerWidth - 0.5) * 2;
-    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 1;
     setMousePosition({ x, y });
   };
 

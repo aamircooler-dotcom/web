@@ -342,7 +342,7 @@ function App() {
    
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
-      start: "bottom bottom",
+      start: "bottom center",
       onEnter: () => setShowTestimonials(false),
       onLeaveBack: () => setShowTestimonials(true),
     });
@@ -350,7 +350,7 @@ function App() {
     // Show contact section when portfolio section is visible
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current, 
-      start: "bottom center",
+      start: "center center",
       onEnter: () => setShowContact(true),
       onLeaveBack: () => setShowContact(false),
     });

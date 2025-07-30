@@ -419,9 +419,14 @@ function App() {
 <div 
   ref={eyesRef}
   className="absolute inset-0 flex items-center justify-center z-29" 
-  style={{ top: '20%', left: '1%',
-          transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
-         }}
+  style={{
+  top: '20%',
+  left: '1%',
+  transform: isCursorInsideHero
+    ? `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`
+    : 'translate(0, 0)' // reset to center when outside
+}}
+
 >
   <div className="relative"> 
     <div 

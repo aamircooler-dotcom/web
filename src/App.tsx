@@ -327,17 +327,6 @@ ScrollTrigger.create({
     }
   });
 
-  // Background text fade
-  gsap.to(backgroundTextRef.current, {
-    y: -300,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: heroRef.current,
-      start: "center top",
-      end: "bottom+=-100 top",
-      scrub: 1
-    }
-  });
 
     // bg text animate
   gsap.to(backgroundTextRef.current, {

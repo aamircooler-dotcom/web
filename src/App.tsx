@@ -660,7 +660,7 @@ useEffect(() => {
           </h2>
 
           {/* Subheading */} 
-          <p className="text-white/30 text-lg md:text-xl mb-10 text-center font-bosenAlt">
+          <p className="text-white/30 text-lg md:text-xl mb-10 text-center font-IBM Plex Sans">
             Drop me a message, let's make something users will love.
           </p>
 

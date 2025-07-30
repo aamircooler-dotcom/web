@@ -670,7 +670,7 @@ useEffect(() => {
               <Mail className="text-white/70 w-8 h-8" />
               <a
                 href="mailto:sanimani@gmail.com"
-                className="text-white/80 font-bosenAlt text-[90%] tracking-wide hover:text-blue-500 transition-colors duration-200"
+                className="text-white/80 font-bosenAlt text-full tracking-wide hover:text-blue-500 transition-colors duration-200"
               >
                 SANIMANI @ GMAIL.COM
               </a>

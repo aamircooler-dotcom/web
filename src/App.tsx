@@ -265,32 +265,38 @@ const [isCursorInsideHero, setIsCursorInsideHero] = React.useState(false);
   const handleMouseMove = (e: MouseEvent) => {
     if (!heroRef.current) return;
 
-    // Get size and position of hero section
     const bounds = heroRef.current.getBoundingClientRect();
 
-    // Check if cursor is inside hero section
-    if (
+    const isInside =
       e.clientX >= bounds.left &&
       e.clientX <= bounds.right &&
       e.clientY >= bounds.top &&
-      e.clientY <= bounds.bottom
-    ) {
-      setIsCursorInsideHero(true);
+      e.clientY <= bounds.bottom;
 
-      const x = (e.clientX / window.innerWidth - 0.5) * 0.7;
-      const y = (e.clientY / window.innerHeight - 0.5) * 0.7;
+    if (isInside) {
+      setIsCursorInsideHero(true);
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
       setMousePosition({ x, y });
     } else {
       setIsCursorInsideHero(false);
-      setMousePosition({ x: 0, y: 0 }); // reset position
+      setMousePosition({ x: 0, y: 0 });
     }
   };
 
-  // Add event listener
-  window.addEventListener('mousemove', handleMouseMove);
+  const handleMouseLeave = () => {
+    // Reset when mouse leaves the entire window
+    setIsCursorInsideHero(false);
+    setMousePosition({ x: 0, y: 0 });
+  };
 
-  // Clean up when component unmounts
-  return () => window.removeEventListener('mousemove', handleMouseMove);
+  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('mouseleave', handleMouseLeave);
+
+  return () => {
+    window.removeEventListener('mousemove', handleMouseMove);
+    window.removeEventListener('mouseleave', handleMouseLeave);
+  };
 }, []);
 
 

@@ -281,7 +281,7 @@ gsap.to(portfolioRef.current, {
     ease: 'power3.out',
     scrollTrigger: {
       trigger: portfolioRef.current,
-      start: 'top 80%', // better than 'bottom 100%'
+      start: 'top 0%', // better than 'bottom 100%'
       toggleActions: 'play none none reverse',
       once: true,
   }

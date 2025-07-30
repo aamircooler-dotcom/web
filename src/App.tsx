@@ -255,24 +255,26 @@ function App() {
   const [isMouseTrackingEnabled, setIsMouseTrackingEnabled] = useState(true);
 
 // Track if cursor enters/leaves hero section
-useEffect(() => {
-  const heroElement = heroRef.current;
-  if (!heroElement) return;
+ useEffect(() => {
+    const handleMouseEnter = () => setIsCursorInsideHero(true);
+    const handleMouseLeave = () => {
+      setIsCursorInsideHero(false);
+      setMousePosition({ x: 0, y: 0 }); // optional reset
+    };
 
-  const handleMouseEnter = () => setIsCursorInsideHero(true);
-  const handleMouseLeave = () => {
-    setIsCursorInsideHero(false);
-    setMousePosition({ x: 0, y: 0 }); // Optional reset
-  };
+    const heroElement = heroRef.current;
+    if (heroElement) {
+      heroElement.addEventListener("mouseenter", handleMouseEnter);
+      heroElement.addEventListener("mouseleave", handleMouseLeave);
+    }
 
-  heroElement.addEventListener("mouseenter", handleMouseEnter);
-  heroElement.addEventListener("mouseleave", handleMouseLeave);
-
-  return () => {
-    heroElement.removeEventListener("mouseenter", handleMouseEnter);
-    heroElement.removeEventListener("mouseleave", handleMouseLeave);
-  };
-}, [heroRef]);
+    return () => {
+      if (heroElement) {
+        heroElement.removeEventListener("mouseenter", handleMouseEnter);
+        heroElement.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, []);
 
 // Mouse tracking effect
 useEffect(() => {

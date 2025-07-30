@@ -315,7 +315,7 @@ useEffect(() => {
     trigger: heroRef.current,
     start: "top top",
     end: "top+=1500", // 🔁 reduce to make it slower & smoother
-    scrub: 0   // 🔁 increase for smoother animation
+    scrub: 3.1   // 🔁 increase for smoother animation
   }
 });
    

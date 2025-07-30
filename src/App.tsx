@@ -448,7 +448,7 @@ useEffect(() => {
     top: '21%',
     left: '1%',
       transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
-     transition: 'transform 0.2s ease-out'
+     transition: 'transform 0.2s'
   }}
 >
 

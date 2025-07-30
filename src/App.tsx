@@ -577,7 +577,7 @@ useEffect(() => {
       {/* Portfolio Section */}
       <div 
   ref={portfolioSectionRef} 
-  className="relative min-h-screen w-full bg-white z-40 rounded-t-[3rem] rounded-b-[3rem] texture-overlay opacity-100 translate-y- 10"
+  className="relative min-h-screen w-full bg-white z-60 rounded-t-[3rem] rounded-b-[3rem] texture-overlay opacity-100 translate-y- 10"
 >
 
         

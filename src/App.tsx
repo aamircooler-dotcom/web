@@ -275,15 +275,15 @@ function App() {
 
    // Animate portfolio section as it enters
 gsap.to(portfolioRef.current, {
-  y: -590,
-  opacity: 1,
-  duration: 1.2,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: portfolioRef.current,
-    start: "bottom 100%", // start thoda pehle
-    toggleActions: "play none none reverse",
-    once: true
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: portfolioRef.current,
+      start: 'top 80%', // better than 'bottom 100%'
+      toggleActions: 'play none none reverse',
+      once: true,
   }
 });
 

@@ -445,7 +445,7 @@ useEffect(() => {
   ref={eyesRef}
   className="absolute inset-0 flex items-center justify-center z-20"
   style={{
-    top: '21%',
+    top: '19%',
     left: '0.5%',
       transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
   }}

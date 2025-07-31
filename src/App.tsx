@@ -478,9 +478,6 @@ useEffect(() => {
     </div> 
   </div>
 </div>
-        {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/40" />
-</div>
 
         {/* Background Text - Aamir Naqvi at Bottom */}
         <div 
@@ -552,6 +549,9 @@ useEffect(() => {
     ))}
   </div>
 )}
+        {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/40" />
+</div>
 
         {/* Bottom Triangle Shape */}
         <div 

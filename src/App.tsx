@@ -398,9 +398,7 @@ useEffect(() => {
     zIndex: -1
   }}
 >
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/40" />
-</div>
+
 
       {/* Main Hero Section */} 
       <div 

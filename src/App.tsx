@@ -446,7 +446,7 @@ useEffect(() => {
   className="absolute inset-0 flex items-center justify-center z-20"
   style={{
     top: '21%',
-    left: '1%',
+    left: '0%',
       transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
   }}
 >

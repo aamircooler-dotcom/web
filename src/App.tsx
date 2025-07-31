@@ -353,7 +353,7 @@ useEffect(() => {
 
   // Portfolio up animation
   gsap.to(portfolioSectionRef.current, {
-  y: -700,
+  y: -900,
   scrollTrigger: {
     trigger: portfolioSectionRef.current,
     start: "top bottom", // trigger when bottom of element hits 80% of viewport

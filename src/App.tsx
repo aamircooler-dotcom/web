@@ -549,9 +549,7 @@ useEffect(() => {
     ))}
   </div>
 )}
-        {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/40" />
-</div>
+      
 
         {/* Bottom Triangle Shape */}
         <div 
